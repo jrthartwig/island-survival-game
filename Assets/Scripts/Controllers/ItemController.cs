@@ -13,20 +13,60 @@ public class ItemController : MonoBehaviour
 
     void Start()
     {
-        icon = GetComponent<Image>();
+        if (icon == null)
+        {
+            icon = GetComponent<Image>();
+        }
     }
 
-    public void SetItem(Item newItem)
+    public void StackItems(Item newItem, List<Item> existingItems)
     {
-        item = newItem;
-        icon.sprite = item.itemIcon;
-        icon.color = new Color32(255, 255, 225, 255);
+        int index = existingItems.IndexOf(newItem);
+        if (index != -1)
+        {
+            item = existingItems[index];
+            item.amount++;
+            amount++;
+        }
+        else
+        {
+            amount = 1;
+            SetItem(newItem, existingItems);
+        }
+    }
+
+    public void SetItem(Item newItem, List<Item> existingItems)
+    {
+        int index = existingItems.IndexOf(newItem);
+        if (index != -1)
+        {
+            item = existingItems[index];
+            item.amount++;
+            amount++;
+        }
+        else
+        {
+            item = newItem;
+            item.amount = 1;
+            amount = 1;
+            existingItems.Add(newItem);
+        }
+
+        if (icon != null)
+        {
+            icon.sprite = item.itemIcon;
+            icon.color = new Color32(255, 255, 225, 255);
+        }
     }
 
     public void Reset()
     {
-        icon.sprite = null;
-        icon.color = new Color32(255, 255, 225, 50);
+        item = null;
+        amount = 0;
+        if (icon != null)
+        {
+            icon.sprite = null;
+            icon.color = new Color32(255, 255, 225, 50);
+        }
     }
-
 }
