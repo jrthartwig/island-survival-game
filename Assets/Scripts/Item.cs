@@ -10,4 +10,18 @@ public class Item : ScriptableObject
 
     public Sprite itemIcon;
     public int amount;
+
+    public List<UpdateStat> updateStats = new List<UpdateStat>();
+}
+
+[System.Serializable]
+public class UpdateStat
+{
+    public IntegerVariable variable;
+    public int amount;
+
+    public void UpdateStatValue()
+    {
+        variable.SetValue(variable.value + amount);
+    }
 }

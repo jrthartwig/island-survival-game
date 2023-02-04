@@ -7,6 +7,8 @@ public class PlayerController : CharController
     public List<Item> items = new List<Item>();
     public ItemController[] itemControllers;
 
+    public IntegerVariable testInteger;
+
     public void AddItem(Item addItem)
     {
         int existingItemIndex = items.FindIndex(i => i.itemName == addItem.itemName);
@@ -21,6 +23,8 @@ public class PlayerController : CharController
             itemControllers = GetComponentsInChildren<ItemController>();
             RefreshInventory();
         }
+
+        addItem.updateStats.ForEach(s => s.UpdateStatValue());
     }
 
     void RefreshInventory()
@@ -36,6 +40,18 @@ public class PlayerController : CharController
             {
                 itemControllers[i].Reset();
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            testInteger.SetValue(testInteger.value + 10);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            testInteger.SetValue(testInteger.value - 10);
         }
     }
 }
