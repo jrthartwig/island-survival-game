@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -364,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 176981769}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &176981769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 615569450}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &615569450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 654663778}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &654663778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 674972394}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &674972394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,6 +1296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1237714350}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &1237714350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1578615372}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &1578615372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1680,17 +1686,7 @@ MonoBehaviour:
   charName: Player
   hp: 10
   items: []
-  itemController:
-  - {fileID: 1951966614}
-  - {fileID: 615569449}
-  - {fileID: 674972393}
-  - {fileID: 176981768}
-  - {fileID: 1578615371}
-  - {fileID: 654663777}
-  - {fileID: 1884969443}
-  - {fileID: 1808261390}
-  - {fileID: 1237714349}
-  - {fileID: 1895104412}
+  itemControllers: []
 --- !u!1 &1808261388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1808261391}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &1808261391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,6 +1832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1884969444}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &1884969444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,6 +1924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1895104413}
   item: {fileID: 0}
+  amount: 0
 --- !u!114 &1895104413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,3 +2183,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1951966612}
   item: {fileID: 0}
+  amount: 0

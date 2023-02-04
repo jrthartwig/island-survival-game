@@ -9,4 +9,5 @@ public class Item : ScriptableObject
     public int itemValue;
 
     public Sprite itemIcon;
+    public int amount;
 }
